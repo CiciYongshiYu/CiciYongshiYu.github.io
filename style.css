@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Libre Baskerville&display=swap');
 
+:root {--main-color:#EFEFEF;}
 
-body{
-  background-color:#EFEFEF;
-  font-family:Georgia;
+body * {
+  -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+  font-family: 'Libre Baskerville', sans-serif;
+  text-align:center;
+  font-weight: 400;
+  color: #000;
 }
