@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Libre Baskerville&display=swap');
 
-:root {--main-color:#EFEFEF;}
+:root {--main-color:#705D59;}
 
 body * {
   -webkit-box-sizing: border-box;
@@ -9,5 +9,30 @@ body * {
   font-family: 'Libre Baskerville', sans-serif;
   text-align:center;
   font-weight: 400;
-  color: #000;
+  color: #EFEFEF;
+}
+
+h1 {
+  color: var(--main-color);
+  text-align: left;
+  font-size: 3em;
+  padding-top: 0.5em;
+  font-family:'Libre Baskerville';
+  margin:0
+}
+h2 {
+  font-size: 1.8em;
+  text-align:left;
+  font-family: 'Libre Baskerville', sans-serif;
+  font-weight: 400;
+  color: var(--main-color);
+
+}
+h3 {
+  font-size: 1.2em;
+  font-family: 'Libre Baskerville', sans-serif;
+  color: var(--main-color);
+  font-weight: 400;
+  text-align:left;
+  margin-bottom: 0.3px;
 }
