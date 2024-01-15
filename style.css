@@ -38,6 +38,23 @@ h3 {
   margin-bottom: 0.3px;
 }
 
-a {
-    text-decoration: none
+a {text-decoration: none}
+
+p {
+  font-size: 1em;
+  text-align: left;
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  text-align:left;
+}
+
+.sociallinks a {
+  font-family: 'Lato', sans-serif;
+  color: var(--main-color);
+  font-weight: 400;
+}
+
+.highlights p {
+  line-height: 1.2;
+  margin-top: 0.3px;
 }
