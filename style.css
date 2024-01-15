@@ -43,13 +43,13 @@ a {text-decoration: none}
 p {
   font-size: 1em;
   text-align: left;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Libre Baskerville', sans-serif;
   font-weight:300;
   text-align:left;
 }
 
 .sociallinks a {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Libre Baskerville', sans-serif;
   color: var(--main-color);
   font-weight: 400;
 }
