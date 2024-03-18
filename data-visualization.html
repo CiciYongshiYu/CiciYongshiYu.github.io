@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing - Journalist Portfolio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="resource/css/style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#visualizationSelect').change(function() {
+        var selectedVisualization = $(this).val();
+        var content = '';
+        $('#additionalContent').html(''); // Clear additional content
+        switch(selectedVisualization) {
+          case 'medicalRecords':
+            content = '<iframe src="https://flo.uri.sh/visualisation/14570948/embed" title="Interactive or visual content" class="flourish-embed-iframe" frameborder="0" scrolling="no" style="width:100%;height:600px;" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>';
+            break;
+          case 'abortionLitigation':
+            content = '<iframe src="https://flo.uri.sh/visualisation/14642691/embed" title="Interactive or visual content" class="flourish-embed-iframe" frameborder="0" scrolling="no" style="width:100%;height:600px;" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>';
+            break;
+          case 'opioidSettlement':
+            content = '<iframe src="https://flo.uri.sh/visualisation/13507019/embed" title="Interactive or visual content" class="flourish-embed-iframe" frameborder="0" scrolling="no" style="width:100%;height:600px;" sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>';
+            break;
+          case 'problemGambling':
+            content = '<iframe src="https://datawrapper.dwcdn.net/4rPaa/3/" title="Interactive or visual content" class="flourish-embed-iframe" frameborder="0" scrolling="no" style="width:100%;height:600px;"></iframe>';
+            break;
+          case 'opioidCrisis':
+            content = '<iframe src="https://datawrapper.dwcdn.net/WbNfa/9/" title="Interactive or visual content" class="flourish-embed-iframe" frameborder="0" scrolling="no" style="width:100%;height:600px;"></iframe>';
+            content += '<button id="toggleMaps" class="btn btn-info mt-2">Toggle Maps</button>';
+            break;
+          case 'unemploymentRate':
+            content = '<img src="resource/images/research.png" alt="Unemployment Rate Visualization" style="width:100%;max-height:1400px;">';
+            break;
+        }
+        $('#visualizationContainer').html(content);
+        if (selectedVisualization == 'opioidCrisis') {
+          $('#toggleMaps').click(function() {
+            var currentSrc = $('#visualizationIframe').attr('src');
+            var newSrc = currentSrc === 'https://datawrapper.dwcdn.net/WbNfa/9/' ? 'https://datawrapper.dwcdn.net/NHVIi/2/' : 'https://datawrapper.dwcdn.net/WbNfa/9/';
+            $('#visualizationIframe').attr('src', newSrc);
+          });
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <header class="container text-center my-5">
+    <h1>Data Visualization</h1>
+    <nav class="nav justify-content-center">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About Me</a>
+      <a class="nav-link active" href="data-visualization.html">Data Visualization</a>
+      <a class="nav-link" href="podcasting.html">Podcasting</a>
+    </nav>
+  </header>
+
+  <section class="container my-5">
+    <h2>Data Visualization</h2>
+    <p>I enjoy creating data visualization for my writings.</p>
+    <div style="margin-bottom: 20px;">
+      <label for="visualizationSelect">📊 Choose my visualization 👀</label>
+      <select id="visualizationSelect" class="form-control">
+        <option value="medicalRecords">Medical Records</option>
+        <option value="abortionLitigation">Abortion Litigation</option>
+        <option value="opioidSettlement">Opioid Settlement</option>
+        <option value="problemGambling">Problem Gambling</option>
+        <option value="opioidCrisis">Opioid Crisis</option>
+        <option value="unemploymentRate">Unemployment Rate</option>
+      </select>
+    </div>
+    <div id="visualizationContainer" style="height: 100%"></div>
+    <div id="additionalContent"></div>
+  </section>
+
+  <footer class="container text-center my-5">
+    <p>Contact me at <a href="mailto:ciciyu053@gmail.com">ciciyu053@gmail.com</a></p>
+  </footer>
+</body>
+</html>
