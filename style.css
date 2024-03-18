@@ -1,65 +1,92 @@
 /* General body styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  margin: 0;
-  padding: 0;
+  background-color: #f4f4f4; /* Light grey background */
+  color: #333; /* Dark grey text */
+  font-family: Arial, sans-serif; /* Use Arial or sans-serif fonts */
 }
 
 /* Header styles */
 header {
-  background: #333;
-  color: #fff;
-  padding: 1rem 0;
+  padding: 20px 0; /* 20px top and bottom padding */
+  border-bottom: 1px solid #ccc; /* Light grey bottom border */
 }
 
-nav a {
-  color: #fff;
-  padding: 0 15px;
-  text-decoration: none;
+/* Navigation link styles */
+.nav-link {
+  color: #eba01e; /* Orange color */
+  text-decoration: none; /* No underline */
 }
 
-nav a:hover {
-  text-decoration: underline;
+.nav-link:hover {
+  text-decoration: none; /* No underline on hover */
 }
 
-/* Section styles */
-section h2 {
-  color: #333;
+/* Section heading styles */
+h2 {
+  color: #333; /* Dark grey for headings */
+  margin-bottom: 20px; /* 20px bottom margin */
 }
 
 /* Card styles */
 .card {
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow */
+  margin-bottom: 50px; /* Increased bottom margin for spacing between rows */
+  height: 100%; /* Full height */
 }
 
-/* Button styles inside cards */
-.card .btn-primary {
-  background-color: #eba01e;
-  border-color: #eba01e;
+/* Card body styles */
+.card-body {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
 }
 
-.card .btn-primary:hover {
-  background-color: #d98e1b;
-  border-color: #d98e1b;
+/* Pushes card text and button to fill space */
+.card-text {
+  flex-grow: 1; /* Allow text to grow and fill available space */
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #eba01e; /* Orange background */
+  border-color: #eba01e; /* Matching border color */
+}
+
+.btn-primary:hover {
+  background-color: #cc8400; /* Darker orange on hover */
+  border-color: #cc8400; /* Matching border color on hover */
+}
+
+.img-thumbnail {
+  max-width: 200px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Style for publication section */
+.publication-header {
+  font-weight: bold;
+}
+
+.publication-list {
+  list-style-type: disc; /* Bullet style */
+  padding-left: 20px; /* Proper indentation for bullets */
+}
+
+.publication-list li {
+  margin-bottom: 10px; /* Space between items */
 }
 
 /* Footer styles */
 footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem 0;
+  padding: 20px 0; /* 20px top and bottom padding */
+  border-top: 1px solid #ccc; /* Light grey top border */
 }
 
+/* Footer link styles */
 footer a {
-  color: #eba01e;
-  text-decoration: none;
+  color: #eba01e; /* Orange for links */
+  text-decoration: none; /* No underline */
 }
 
 footer a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline on hover */
 }
